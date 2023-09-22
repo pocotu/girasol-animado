@@ -58,27 +58,22 @@
     <script>
         const friendshipMessage = "Esta flor para la persona que me hace sonreir, para la persona que me hace sentir especial. Te amo Ruth Margot.";
 
-        // Obtiene el contenedor donde se mostrara el mensaje
         const messageContainer = document.getElementById("friendship-message");
 
-        // Función para mostrar el mensaje letra por letra
         function displayMessage() {
             const messageArray = friendshipMessage.split("");
             let index = 0;
 
-          // Crea un intervalo para mostrar cada letra
             const intervalId = setInterval(() => {
                 if (index < messageArray.length) {
                     messageContainer.textContent += messageArray[index];
                     index++;
                 } else {
-                // Cuando se muestra todo el mensaje, deten el intervalo
                 clearInterval(intervalId);
                 }
-            }, 200); // Puedes ajustar el intervalo de tiempo según tu preferencia
+            }, 200);
         }
 
-        // Llama a la funcion para mostrar el mensaje
         displayMessage();
     </script>
 
